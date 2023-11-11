@@ -1,0 +1,88 @@
+THEORY :-
+
+===> What is Emmet?
+Ans: Emmet is a toolkit that helps us to write HTML and CSS code faster.
+     * With Emmet, we can use shortcuts to generate code snippets and save ourself from typing out repetitive or complex structures.
+
+===> What is React?
+Ans: React is a free, open-source, frontend JavaScript Library to build large scale FrontEnd Applications(UI - User Interface Applications).
+     -> Free : no cost, its free of cost
+	 -> Open Source : the original source code is made freely available to all
+	 -> Frontend : used for developing frontend / UI applications
+	 NOTE: reacr, at the EOD is nothing but the code written in JavaScript.
+	 NOTE: Written by some Facebook Developers.
+	 
+===> Why is React known as React?
+Ans: React got its name as "React", because it's all about, well, reacting to changes in the user interface.
+     * When the state of our application changes, React efficiently updates and re-renders only the necessary components.
+	 * It's like our UI is in a constant state of responsiveness, reacting dynamically to user inputs and changes in data. 
+
+===> What is a Library / a Framework?
+Ans: Both the framework vs library is precoded support programs to develop complex software applications.
+
+===> What is the difference between a Framework and a Library?
+Ans: Libraries target a specific functionality, while a framework tries to provide everything required to develop a complete application.
+	 Framework Eg: Angular, Django, Express, Rails
+     Libraries Eg: React, Redux, jQuery
+	 
+===> What is CDN? Why do we use it?
+Ans: CDN : stands for Content Delivery Network (OR Contend Distribution Network).
+     * These are the place OR the websites where lots and lots of data is already hosted and will be delivered as and when the request comes for it.
+	 
+	 Some of the reasons, why we should use CDN are,
+     1. CDNs can significantly speed up the loading time of our website or web application
+     2. CDNs can handle a large amount of traffic, which is crucial for websites with a global audience
+	 3. CDNs can provide additional security features like DDoS protection and threat detection, making our site more robust against various cyber threats
+	 
+===> What is cross-origin in the script tag?
+Ans: cross-origin in the script tag tells the JS Engine that the files mentioned here are coming from other Domain. They are not part of our domain.
+     <script crossorigin="anonymous|use-credentials">
+	 Where,
+	 anonymous : A cross-origin request is performed. No credentials are sent. This is the default value.
+	 <script crossorigin > and <script crossorigin="anonymous"> both are same
+	 AND
+	 use-credentials : A cross-origin request is performed. Credentials are sent (e.g. a cookie, a certificate, a HTTP Basic authentication)
+
+===? What is a DOM?
+Ans: DOM stands for : Document Object Model.
+     * It is a set of APIs that allow programmes and scripts to access and manipulate the document tree.
+	 * With these APIs, we can have access to the document tree, and with that access, we can manipulate the web page.
+
+===> What is the difference between React & React DOM?
+Ans: React is a JavaScript Library to build the user interfaces
+     Where as,
+	 React DOM is a package specifically designed for working with the DOM.
+	 It basically allows React to interact with the DOM. In other words, its acts as a bridge between React & DOM.
+	 
+
+===> What is the difference between react.development.js AND react.production.js files in CDN ?
+Ans: The react.development.js file are only meant for development, and are not suitable for production. 
+     WHERE AS 
+	 react.production.js is the Minified and optimized production version. They are ment for the production.
+	 
+===> What are async and defer?
+Ans: async and defer are attributes used with the <script> tag in HTML to control the loading and execution of external JavaScript files.
+     
+	 * <script async src="script.js"></script>
+	   -- With this the script will be loaded asynchonously with the HTML parsing.
+	   -- after the script is loaded, until its exection is done, the HTML parsing will be stopped.
+	   -- The HTML parsing will be resumed after the script is executed.
+	 
+	 * <script defer src="script.js"></script>
+	   -- With this the browser will load the script along with the HTML parsing BUT execute the script only after parsing (loading) the page.
+	 
+	 Conclusion:
+	 1. The async and defer attributes both allow the browser to continue parsing the HTML document while JavaScript files are being downloaded, 
+	    but they differ in when those files are executed.
+		
+	 2. Async downloads and executes JavaScript as soon as it’s available, 
+	    while defer attribute waits until the HTML document has been parsed before executing any external scripts.
+	 
+	 NOTE: when neither async nor defer is used in the script tag <script src="script.js"></script> ,
+	       the script will be fetched and executed synchronously, and the HTML parsing will be blocked until the script is fully loaded and executed.
+
+	 When To Use async & defer?
+	 1. The async doesn't guarantee the order of execution of the scripts.
+	    SO if there is no dependency in the script executions we should use async.
+	 2. On the other hand, deffer guarantee the order of execution of the scripts.
+	    So, if there is certain dependency in the script executions we should use async.
