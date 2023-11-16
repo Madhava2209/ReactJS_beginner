@@ -1,9 +1,17 @@
 import React from "react"
 import ReactDOM from "react-dom/client"
-const heading = React.createElement('h1', {id: 'heading'}, `ReactJS`)
-const subHeading = React.createElement('h3', {id: 'subHeading'}, 'Learning')
-const parent = React.createElement('div', {id: 'parent'}, 
-    React.createElement('div', {id: 'child'}, [heading, subHeading])
+
+const title = (
+    <div id="heading" tabIndex="1">React</div>
+)
+const searchbar = <input type="text" placeholder="Search..." />
+const userIcon = <div>User</div>
+const Heading = () => (
+    <div className="main-header">
+        {title}
+        {searchbar}
+        {userIcon}
+    </div>
 )
 const root = ReactDOM.createRoot(document.getElementById('root'))
-root.render(parent)
+root.render(Heading())

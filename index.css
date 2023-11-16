@@ -1,0 +1,22 @@
+.main-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    border: 1px solid orange;
+    background-color: black;
+    color: orangered;
+    width: 100%;
+    padding: 10px 15px;
+    box-sizing: border-box;
+}
+input{
+    height: 40px;
+    border-radius: 20px;
+    border: 1px orangered;
+    width: 50%;
+    padding: 20px;
+    box-sizing: border-box;
+    caret-color: orangered;
+    color: red;
+}
