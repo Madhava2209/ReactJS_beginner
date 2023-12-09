@@ -32,9 +32,11 @@
     list-style-type: none;
     display: flex;
 }
-.nav-items > ul > li {
+.nav-items > ul > li, a {
     margin: 0px 10px;
     cursor: pointer;
+    text-decoration: none;
+    color: red;
 }
 .res-card{
     width: 300px;

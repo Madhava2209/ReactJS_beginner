@@ -3,6 +3,7 @@ import { resData } from "../utils/mockData"
 import { ResCard } from "./RestCard"
 import { useState, useEffect } from "react"
 import { ShimmerUI } from "./Shimmer"
+import { Link } from "react-router-dom"
 export const ResContainer = () => {
     const [resList, setResList] = useState([])
     const [restaurantData, setRestaurantData] = useState([])
@@ -12,12 +13,9 @@ export const ResContainer = () => {
         setRestaurantData(filteredData)
     }
     const onSearch = (e) => {
-        // searchText = e.target.value
-        // setSearchText(e.target.value)
         onRestaurantSearch(searchText)
     }
     const onRestaurantSearch = (e) => {
-        console.log(e, resList)
         const filteredData = resList.filter(res => res.info.name.toLowerCase().includes(e.toLowerCase()))
         setRestaurantData(filteredData)
     }
@@ -48,7 +46,7 @@ export const ResContainer = () => {
             <div className="res-card-container">
                 {
                     restaurantData.map(data => (
-                        <ResCard key={data.info.id} resData={data.info}></ResCard>
+                        <Link key={data.info.id} to={`/menu/${data.info.id}`}><ResCard resData={data.info}></ResCard></Link>
                     ))
                 }
             </div>

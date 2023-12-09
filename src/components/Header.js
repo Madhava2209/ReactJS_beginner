@@ -1,12 +1,13 @@
+import { Link } from "react-router-dom"
 const title = (
     <div id="heading" tabIndex="1">OrderIt</div>
 )
 const userIcon = 
     (<div className="nav-items">
         <ul>
-            <li>Home</li>
-            <li>About</li>
-            <li>Contact Us</li>
+            <Link to='/'>Home</Link>
+            <Link to='/about'>About</Link>
+            <Link to='/contact'>Contact Us</Link>
             <li>Cart</li>
         </ul>
     </div>)
