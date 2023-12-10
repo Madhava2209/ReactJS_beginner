@@ -64,3 +64,10 @@
     justify-content: center;
     margin: 20px 0px;
 }
+
+.user-card{
+    border: 2px solid lightgrey;
+    margin: 16px;
+    border-radius: 16px;
+    padding: 20px;
+}
