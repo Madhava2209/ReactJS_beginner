@@ -1,15 +1,14 @@
-import React from "react"
+import React, { Suspense, lazy } from "react"
 import ReactDOM from "react-dom/client"
 import { Header } from "./components/Header"
 import { MainBody } from "./components/MainBody"
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom"
-import About from "./components/About"
-import Contact from "./components/Contact"
-import { Error } from "./components/Error"
+import Error from "./components/Error"
 import { Menu } from "./components/Menu"
 
-
-
+const About = lazy(() => import("./components/About"))
+const Contact = lazy(() => import("./components/Contact"))
+const Error = lazy(() => import("./components/Error"))
 const AppLayout = () => (
     <div>
         <Header/>
@@ -27,18 +26,18 @@ const appRouter = createBrowserRouter([
             },
             {
                 path: '/about',
-                element: <About />
+                element: <Suspense fallback={<h1>Loading....</h1>}><About /></Suspense>
             },
             {
                 path: '/contact',
-                element: <Contact/>
+                element: <Suspense fallback={<h1>Loading....</h1>}><Contact/></Suspense>
             },
             {
                 path: '/menu/:resId',
                 element: <Menu/>
             }
         ],
-        errorElement: <Error/>
+        errorElement: <Suspense fallback={<h1>Loading....</h1>}><Error/></Suspense>
     }
 ])
 const root = ReactDOM.createRoot(document.getElementById('root'))
